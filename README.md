@@ -1,4 +1,4 @@
-# Access to private members and methods of a C++ struct or class.
+# Access to private members and methods in C++
 
 ![privablic logo](images/privablic.png)
 
