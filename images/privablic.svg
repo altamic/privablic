@@ -1,0 +1,24 @@
+<svg width="640" height="480" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+	  <defs>
+	  <linearGradient id="gradient" x1="0" x2="0" y1="0" y2="1">
+		<stop class="stop1" offset="0%"/>
+		<stop class="stop2" offset="100%"/>
+	  </linearGradient>
+	  <style type="text/css"><![CDATA[
+		.stop1 { stop-color: #fd7d19; }
+		.stop2 { stop-color: #fdaa19; }
+	  ]]></style>
+  </defs>
+ <g>
+  <title>Privablic logo</title>
+  <text stroke="#282304" font-weight="bold" xml:space="preserve" text-anchor="middle" font-family="Source Code Pro" font-size="78" id="logo" y="224" x="232" stroke-width="1.8" fill="url(#gradient)">pr vablic</text>
+ </g>
+ <g> 	  
+	<path id="keyhole" d="m128,188l-8,36l32,0l-8,-36
+		m -16, 0
+		a 16,16 0 1, 1 17,0" stroke-width="1.8" stroke="#282304" fill="url(#gradient)"/>
+ </g>
+  <g>
+	<text stroke="#282304" font-weight="bold" xml:space="preserve" text-anchor="middle" font-family="Source Code Pro" font-size="78" y="228" x="486" stroke-width="1.8" fill="#e0e0e0">++</text>
+ </g>
+</svg>

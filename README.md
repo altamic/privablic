@@ -1,6 +1,6 @@
-# Access to private members and methods in C++
-
 ![privablic logo](images/privablic.png)
+
+Access to private members and methods in C++
 
 # How to use it
 
