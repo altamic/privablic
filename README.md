@@ -77,7 +77,7 @@ Lilly: Baa! Baa!
 sheperd actually counted 41 sheeps
 ```
 
-# Tested compilers which work with
+# Tested compilers which works with
 
 ## clang
 
