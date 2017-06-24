@@ -82,8 +82,7 @@ sheperd actually counted 41 sheeps
 
 ## clang
 
-* v3.6.1
-* v3.8.1
+Works under OSX
 
 ## gcc
 
