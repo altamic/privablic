@@ -104,5 +104,5 @@ Unkwown (please try and pull request to let me know :)
 
 # License
 
-Copyright 2017 Michelangelo Altamore. It may be redistributed under the terms specified in the LICENSE file.
+Copyright 2017 Michelangelo Altamore. It may be redistributed under the terms specified in the [LICENSE](LICENSE) file.
 
