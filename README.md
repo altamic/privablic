@@ -1,6 +1,6 @@
-![privablic logo](images/privablic.png)
+# Access to private members and methods of a C++ struct or class.
 
-Access to private members and methods of a C++ struct or class.
+![privablic logo](images/privablic.png)
 
 # How to use it
 
@@ -53,7 +53,6 @@ template class stowed_method<Sheep_FlockCount, &Sheep::FlockCount>;
 just obtain a Sheep:
 
 ```cpp
-
 Sheep dolly = Sheep("dolly");
 
 // now we have a sheep under our complete control:
