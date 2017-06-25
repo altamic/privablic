@@ -4,7 +4,7 @@ Access to private members and methods in C++
 
 ## How to use it
 
-Copy `privablic.h` into your project and `#include "privablic.h"`.
+Copy [privablic.h](https://raw.githubusercontent.com/altamic/privablic/master/privablic.h) into your project and `#include "privablic.h"`.
 
 Suppose you know the implementation of a class (or a struct) like that:
 
