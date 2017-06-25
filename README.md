@@ -2,7 +2,7 @@
 
 Access to private members and methods in C++
 
-# How to use it
+## How to use it
 
 Copy `privablic.h` into your project and `#include "privablic.h"`.
 
@@ -26,7 +26,7 @@ int Sheep::TOTAL = 42;
 ```
 you only have to map some stubs according to types of members and/or methods signatures:
 
-> Instance Member:
+> Instance Member
 ```cpp
 struct Sheep_name { typedef string (Sheep::*type); };
 template class stow_private<Sheep_name, &Sheep::name>;
@@ -53,7 +53,7 @@ template class stowed_method<Sheep_FlockCount, &Sheep::FlockCount>;
 just obtain a Sheep:
 
 ```cpp
-Sheep dolly = Sheep("dolly");
+Sheep dolly = Sheep("Dolly");
 
 // now we have a sheep under our complete control:
 
@@ -72,7 +72,7 @@ int flockCount = *stowed<Sheep_TOTAL>::value -= 1;
 
 Output:
 
-```bash
+```
 Lilly: Baa! Baa!
 sheperd actually counted 41 sheeps
 ```
