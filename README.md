@@ -53,21 +53,21 @@ template class private_method<Sheep_FlockCount, &Sheep::FlockCount>;
 just obtain a Sheep:
 
 ```cpp
-  Sheep dolly = Sheep("Dolly");
+Sheep dolly = Sheep("Dolly");
 
-  // now we have a sheep under our complete control:
+// now we have a sheep under our complete control:
 
-  // - change dolly's identity
-  dolly.*member<Sheep_name>::value = "Lilly";
+// - change dolly's identity
+dolly.*member<Sheep_name>::value = "Lilly";
 
-  // - make dolly baa
-  (&dolly->*func<Sheep_baa>::ptr)();
+// - make dolly baa
+(&dolly->*func<Sheep_baa>::ptr)();
 
-  // - steal dolly
-  int flockCount = *member<Sheep_TOTAL>::value -= 1;
+// - steal dolly
+int flockCount = *member<Sheep_TOTAL>::value -= 1;
 
-  // - let the sheperd realize it
-  (*func<Sheep_FlockCount>::ptr)();
+// - let the sheperd realize it
+(*func<Sheep_FlockCount>::ptr)();
 ```
 
 #### Output:
