@@ -11,7 +11,7 @@ class Sheep {
     Sheep(string name);
   private:
     string name;
-    void baa() { cout << name << ": Baa! Baa!" << endl; };
+    void baa();
     static int TOTAL;
     static void FlockCount();
 };

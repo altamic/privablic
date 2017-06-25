@@ -1,6 +1,10 @@
 #include "sheep.h"
 
+using namespace std;
+
 Sheep::Sheep(string name) { name = name; };
+
+void Sheep::baa() { cout << name << ": Baa! Baa!" << endl; };
 
 int Sheep::TOTAL = 42;
 
