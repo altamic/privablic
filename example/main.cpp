@@ -46,16 +46,16 @@ int main()
   // ...now we have a sheep under our complete control, so we can:
 
   // - change dolly's identity
-  (*dolly).*stowed<Sheep_name>::value = "Lilly";
+  (*dolly).*member<Sheep_name>::value = "Lilly";
 
   // - make dolly baa
-  (dolly->*result<Sheep_baa>::ptr)();
+  (dolly->*func<Sheep_baa>::ptr)();
 
   // - steal dolly
-  int flockCount = *stowed<Sheep_TOTAL>::value -= 1;
+  int flockCount = *member<Sheep_TOTAL>::value -= 1;
 
   // - let the sheperd realize it
-  (*result<Sheep_FlockCount>::ptr)();
+  (*func<Sheep_FlockCount>::ptr)();
  
   dlclose(libHandle);
 

@@ -25,7 +25,7 @@ struct A_x { typedef char const*(A::*type); };
 
 // Explicit instantiation; the only place where it is legal to pass
 // the address of a private member.  Generates the static ::instance
-// that in turn initializes stowed<Stub>::value.
+// that in turn initializes member<Stub>::value.
 template class private_member<A_x, &A::x>;
 
 // This technique can also be used to access private static member variables.
@@ -71,32 +71,32 @@ int main()
 {
   A a;
 
-  // Use the stowed private member pointer
-  std::cout << a.*stowed<A_x>::value << std::endl;
+  // Use the member private member pointer
+  std::cout << a.*member<A_x>::value << std::endl;
 
-  // Use the stowed private static member pointer
-  std::cout << *stowed<A_y>::value << std::endl;
+  // Use the member private static member pointer
+  std::cout << *member<A_y>::value << std::endl;
 
-  // Use the stowed private method member pointer
-  (a.*result<Af>::ptr)();
+  // Use the member private method member pointer
+  (a.*func<Af>::ptr)();
 
-  // Use the stowed private static method member pointer
-  (*result<Ag>::ptr)();
+  // Use the member private static method member pointer
+  (*func<Ag>::ptr)();
 
 
   B b = B();
 
-  // Use the stowed private member pointer
-  printf("class private instance member: %d\n", b.*stowed<B_x>::value);
+  // Use the member private member pointer
+  printf("class private instance member: %d\n", b.*member<B_x>::value);
 
-  // Use the stowed private static member pointer
- printf("class private static member: %d\n", *stowed<B_y>::value);
+  // Use the member private static member pointer
+ printf("class private static member: %d\n", *member<B_y>::value);
 
-  // Use the stowed private method member pointer
-  (b.*result<Bf>::ptr)();
+  // Use the member private method member pointer
+  (b.*func<Bf>::ptr)();
 
-  // Use the stowed private static method member pointer
-  (*result<Bg>::ptr)();
+  // Use the member private static method member pointer
+  (*func<Bg>::ptr)();
 
 };
 
