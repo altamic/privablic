@@ -53,24 +53,26 @@ template class stowed_method<Sheep_FlockCount, &Sheep::FlockCount>;
 just obtain a Sheep:
 
 ```cpp
-Sheep dolly = Sheep("Dolly");
+void main() {
+  Sheep dolly = Sheep("Dolly");
 
-// now we have a sheep under our complete control:
+  // now we have a sheep under our complete control:
 
-// - change dolly's identity
-(*dolly).*stowed<Sheep_name>::value = "Lilly";
+  // - change dolly's identity
+  dolly.*stowed<Sheep_name>::value = "Lilly";
 
-// - make dolly baa
-(dolly->*result<Sheep_baa>::ptr)();
+  // - make dolly baa
+  (&dolly->*result<Sheep_baa>::ptr)();
 
-// - steal dolly
-int flockCount = *stowed<Sheep_TOTAL>::value -= 1;
+  // - steal dolly
+  int flockCount = *stowed<Sheep_TOTAL>::value -= 1;
 
-// - let the sheperd realize it
-(*result<Sheep_FlockCount>::ptr)();
+  // - let the sheperd realize it
+  (*result<Sheep_FlockCount>::ptr)();
+}
 ```
 
-Output:
+*Output*
 
 ```
 Lilly: Baa! Baa!
