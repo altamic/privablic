@@ -26,25 +26,25 @@ int Sheep::TOTAL = 42;
 ```
 you only have to map some stubs according to types of members and/or methods signatures:
 
-> Instance Member
+### Instance Member
 ```cpp
 struct Sheep_name { typedef string (Sheep::*type); };
 template class private_member<Sheep_name, &Sheep::name>;
 ```
 
-> Instance Method
+### Instance Method
 ```cpp
 struct Sheep_baa { typedef void(Sheep::*type)(); };
 template class private_method<Sheep_baa, &Sheep::baa>;
 ```
 
-> Static Instance Member
+### Static Instance Member
 ```cpp
 struct Sheep_TOTAL { typedef int *type; };
 template class private_member<Sheep_TOTAL, &Sheep::TOTAL>;
 ```
 
-> Static Instance Method
+### Static Instance Method
 ```cpp
 struct Sheep_FlockCount { typedef void(*type)(); };
 template class private_method<Sheep_FlockCount, &Sheep::FlockCount>;
@@ -53,7 +53,6 @@ template class private_method<Sheep_FlockCount, &Sheep::FlockCount>;
 just obtain a Sheep:
 
 ```cpp
-void main() {
   Sheep dolly = Sheep("Dolly");
 
   // now we have a sheep under our complete control:
@@ -69,10 +68,9 @@ void main() {
 
   // - let the sheperd realize it
   (*func<Sheep_FlockCount>::ptr)();
-}
 ```
 
-*Output*
+#### Output:
 
 ```
 Lilly: Baa! Baa!
