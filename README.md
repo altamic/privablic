@@ -29,25 +29,25 @@ you only have to map some stubs according to types of members and/or methods sig
 > Instance Member
 ```cpp
 struct Sheep_name { typedef string (Sheep::*type); };
-template class stow_private<Sheep_name, &Sheep::name>;
+template class private_member<Sheep_name, &Sheep::name>;
 ```
 
 > Instance Method
 ```cpp
 struct Sheep_baa { typedef void(Sheep::*type)(); };
-template class stowed_method<Sheep_baa, &Sheep::baa>;
+template class private_method<Sheep_baa, &Sheep::baa>;
 ```
 
 > Static Instance Member
 ```cpp
 struct Sheep_TOTAL { typedef int *type; };
-template class stow_private<Sheep_TOTAL, &Sheep::TOTAL>;
+template class private_member<Sheep_TOTAL, &Sheep::TOTAL>;
 ```
 
 > Static Instance Method
 ```cpp
 struct Sheep_FlockCount { typedef void(*type)(); };
-template class stowed_method<Sheep_FlockCount, &Sheep::FlockCount>;
+template class private_method<Sheep_FlockCount, &Sheep::FlockCount>;
 ```
 
 just obtain a Sheep:

@@ -16,13 +16,13 @@ typename Stub::type stowed<Stub>::value;
 // instantiation, where it is legal to pass the address of a private
 // member.
 template <class Stub, typename Stub::type x>
-struct stow_private
+struct private_member
 {
-  stow_private() { stowed<Stub>::value = x; }
-  static stow_private instance;
+  private_member() { stowed<Stub>::value = x; }
+  static private_member instance;
 };
 template <class Stub, typename Stub::type x> 
-stow_private<Stub, x> stow_private<Stub, x>::instance;
+private_member<Stub, x> private_member<Stub, x>::instance;
 
 template<typename Stub>
 struct result {
@@ -35,14 +35,14 @@ template<typename Stub>
 typename result<Stub>::type result<Stub>::ptr;
 
 template<typename Stub, typename Stub::type p>
-struct stowed_method : result<Stub> {
+struct private_method : result<Stub> {
   /* fill it ... */
-  struct _stowed_method {
-    _stowed_method() { result<Stub>::ptr = p; }
+  struct _private_method {
+    _private_method() { result<Stub>::ptr = p; }
   };
-  static _stowed_method stowed_method_obj;
+  static _private_method private_method_obj;
 };
 
 template<typename Stub, typename Stub::type p>
-typename stowed_method<Stub, p>::_stowed_method stowed_method<Stub, p>::stowed_method_obj;
+typename private_method<Stub, p>::_private_method private_method<Stub, p>::private_method_obj;
 

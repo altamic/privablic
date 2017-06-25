@@ -26,19 +26,19 @@ struct A_x { typedef char const*(A::*type); };
 // Explicit instantiation; the only place where it is legal to pass
 // the address of a private member.  Generates the static ::instance
 // that in turn initializes stowed<Stub>::value.
-template class stow_private<A_x, &A::x>;
+template class private_member<A_x, &A::x>;
 
 // This technique can also be used to access private static member variables.
 struct A_y { typedef char const** type; };
-template class stow_private<A_y, &A::y>;
+template class private_member<A_y, &A::y>;
 
 // This technique can also be used to access private instance methods
 struct Af { typedef void(A::*type)(); };
-template class stowed_method<Af, &A::f>;
+template class private_method<Af, &A::f>;
 
 // and to access private static methods.
 struct Ag { typedef void(*type)(); };
-template class stowed_method<Ag, &A::g>;
+template class private_method<Ag, &A::g>;
 
 
 // with a class
@@ -56,16 +56,16 @@ int B::y = 42; // initialize static member
 
 
 struct B_x { typedef int (B::*type); };
-template class stow_private<B_x, &B::x>;
+template class private_member<B_x, &B::x>;
 
 struct B_y { typedef int *type; };
-template class stow_private<B_y, &B::y>;
+template class private_member<B_y, &B::y>;
 
 struct Bf { typedef void(B::*type)(); };
-template class stowed_method<Bf, &B::f>;
+template class private_method<Bf, &B::f>;
 
 struct Bg { typedef void(*type)(); };
-template class stowed_method<Bg, &B::g>;
+template class private_method<Bg, &B::g>;
 
 int main()
 {

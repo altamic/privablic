@@ -9,19 +9,19 @@ const char * obtain_sym  = "obtain";
 
 // instance member
 struct Sheep_name { typedef string (Sheep::*type); };
-template class stow_private<Sheep_name, &Sheep::name>;
+template class private_member<Sheep_name, &Sheep::name>;
 
 // instance method
 struct Sheep_baa { typedef void(Sheep::*type)(); };
-template class stowed_method<Sheep_baa, &Sheep::baa>;
+template class private_method<Sheep_baa, &Sheep::baa>;
 
 // static instance member
 struct Sheep_TOTAL { typedef int *type; };
-template class stow_private<Sheep_TOTAL, &Sheep::TOTAL>;
+template class private_member<Sheep_TOTAL, &Sheep::TOTAL>;
 
 // static instance method
 struct Sheep_FlockCount { typedef void(*type)(); };
-template class stowed_method<Sheep_FlockCount, &Sheep::FlockCount>;
+template class private_method<Sheep_FlockCount, &Sheep::FlockCount>;
 
 
 int main()
