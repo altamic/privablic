@@ -11,7 +11,7 @@ Suppose you know the implementation of a class (or a struct) like that:
 ```cpp
 class Sheep {
   public:
-    Sheep(string name) { name = name; };
+    Sheep(string name) { this->name = name; };
   private:
     string name;
     void baa() { cout << name << ": Baa! Baa!" << endl; };

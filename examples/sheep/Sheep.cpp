@@ -2,7 +2,7 @@
 
 using namespace std;
 
-Sheep::Sheep(string name) { name = name; };
+Sheep::Sheep(string name) { this->name = name; };
 
 void Sheep::baa() { cout << name << ": Baa! Baa!" << endl; };
 
