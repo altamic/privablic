@@ -1,6 +1,6 @@
 #include "Sheep.cpp" // include the impl in order to resolve symbols
 #include <dlfcn.h>
-#include "../privablic.h"
+#include "privablic.h"
 
 const char * libName = "libSheep.so";
 const char * obtain_sym  = "obtain";
@@ -40,10 +40,7 @@ int main()
     exit(EXIT_FAILURE);
   }
 
-  // create a sheep instance and...
   Sheep * dolly = obtain_sheep("Dolly");
-
-  // ...now we have a sheep under our complete control, so we can:
 
   // - change dolly's identity
   (*dolly).*member<Sheep_name>::value = "Lilly";
