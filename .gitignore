@@ -1,6 +1,9 @@
 tags
 
 test
-example/*.so
-example/main
+*.so
+main
+test_dog
+
+
 
