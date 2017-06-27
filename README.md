@@ -94,7 +94,7 @@ Unkwown (please try and pull request to let me know :)
 
 # Credits
 
-[Johannes (litb)](http://bloglitb.blogspot.com/2010/07/access-to-private-members-thats-easy.html)
+[Johannes Schaub (litb)](http://bloglitb.blogspot.com/2010/07/access-to-private-members-thats-easy.html)
 
 [Dave Abrahams](https://gist.github.com/dabrahams/1528856)
 
