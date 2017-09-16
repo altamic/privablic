@@ -1,4 +1,4 @@
-![privablic logo](images/privablic.png)
+![privablic-logo](images/privablic.png)
 
 Access to private members and methods in C++
 
