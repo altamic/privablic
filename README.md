@@ -1,4 +1,4 @@
-<img src="images/privablic.png" />
+![privablic logo](https://raw.githubusercontent.com/altamic/privablic/master/images/privablic.png)
 
 Access to private members and methods in C++
 
