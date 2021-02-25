@@ -14,11 +14,11 @@ Now, suppose you know the implementation of a class (or a struct) like that:
 class Sheep 
 {
 public:
-    Sheep(string name_) : name{ std::move(name_) } {}
+    Sheep(std::string name_) : name{ std::move(name_) } {}
     
 private:
     // Data
-    string name;
+    std::string name;
     static int TOTAL;
 
     // Functions
