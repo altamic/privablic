@@ -89,8 +89,7 @@ Unkwown (please try and pull request to let me know :)
 
 ## msvc
 
-Unkwown (please try and pull request to let me know :)
-
+Tested successfully for accessing protected members in Unreal Engine 5 in derived classes under Windows 11
 
 # Credits
 
