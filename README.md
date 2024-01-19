@@ -96,8 +96,7 @@ GCC 7.x (at least!)
 
 ## msvc
 
-Visual Studio 2019 (at least!)
-
+Tested successfully for accessing protected members in Unreal Engine 5 in derived classes under Windows 11
 
 # Credits
 
