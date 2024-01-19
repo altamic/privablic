@@ -1,3 +1,8 @@
+#ifndef INCLUDED_PRIVABLIC_H
+#define INCLUDED_PRIVABLIC_H
+
+namespace privablic 
+{  
 // Generate a static data member of type Stub::type in which to store
 // the address of a private member.  It is crucial that Stub does not
 // depend on the /value/ of the the stored address in any way so that
@@ -45,4 +50,5 @@ struct private_method : func<Stub> {
 
 template<typename Stub, typename Stub::type p>
 typename private_method<Stub, p>::_private_method private_method<Stub, p>::private_method_obj;
-
+}
+#endif
